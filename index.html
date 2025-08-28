@@ -5,57 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bita Malekian — Resume</title>
   <meta name="description" content="One-page resume for Bita Malekian" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
-    :root {
-      --text: #0f172a;           /* slate-900 */
-      --muted: #475569;          /* slate-600 */
-      --bg: #ffffff;             /* white */
-      --accent: #2563eb;         /* blue-600 */
-      --chip: #e2e8f0;           /* slate-200 */
-      --border: #e5e7eb;         /* neutral-200 */
+    :root{
+      --text:#374151;      /* dark gray */
+      --muted:#6b7280;     /* medium gray */
+      --bg:#ffffff;        /* white */
+      --accent:#374151;    /* dark gray for emphasis */
+      --heading:#374151;   /* heading gray */
+      --chip:#f3f4f6;      /* light gray */
+      --border:#e5e7eb;    /* light border */
     }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text); background: var(--bg);
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font:16px/1.6 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color:var(--text); background:var(--bg);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
-    .page { max-width: 900px; margin: 0 auto; padding: 28px 18px 60px; }
-    header {
-      display: grid; gap: 6px; align-items: end; grid-template-columns: 1fr auto; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 18px;
+    .page{max-width:900px; margin:0 auto; padding:28px 18px 60px}
+
+    header{
+      display:grid; gap:6px; align-items:end;
+      grid-template-columns:1fr auto;
+      border-bottom:2px solid var(--border);
+      padding-bottom:14px; margin-bottom:18px;
     }
-    h1 { margin: 0; font-size: clamp(28px, 4.5vw, 40px); line-height: 1.15; }
-    .role { color: var(--muted); font-weight: 500; }
-    .contact { text-align: right; font-size: 14px; color: var(--muted); }
-    .contact a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
-    .contact a:hover { color: var(--text); border-color: var(--text); }
-    nav.tools { margin-top: 10px; }
-    .btn { display: inline-block; font-size: 14px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text); }
-    .btn:hover { border-color: var(--text); }
+    h1{margin:0; font-size:clamp(28px,4.5vw,40px); line-height:1.15; color:var(--accent)}
+    .role{color:var(--muted); font-weight:500; font-style:italic}
+    .contact{text-align:right; font-size:14px; color:var(--muted)}
+    .contact a{color:var(--muted); text-decoration:none; border-bottom:1px dotted var(--muted)}
+    .contact a:hover{color:var(--accent); border-color:var(--accent)}
+    nav.tools{margin-top:10px}
+    .btn{display:inline-block; font-size:14px; padding:10px 12px; border:1px solid var(--border); border-radius:20px; text-decoration:none; color:var(--accent); background:#fff}
+    .btn:hover{border-color:var(--accent); background:#f9fafb}
 
-    section { margin: 22px 0; }
-    h2 { margin: 0 0 8px; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase; }
-    h3 { margin: 8px 0 6px; font-size: 15px; font-weight: 600; color: var(--muted); }
-    .summary { color: var(--text); background: #f8fafc; border: 1px solid var(--border); padding: 12px; border-radius: 10px; }
+    section{margin:22px 0}
+    h2{margin:0 0 8px; font-size:18px; letter-spacing:.02em; text-transform:uppercase; color:var(--heading)}
+    h3{margin:8px 0 6px; font-size:15px; font-weight:600; color:var(--muted)}
+    .summary{color:var(--text); background:#fafafa; border:1px solid var(--border); padding:12px; border-radius:12px}
 
-    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-    .chip { background: var(--chip); border-radius: 999px; padding: 4px 10px; font-size: 13px; }
+    .chips{display:flex; flex-wrap:wrap; gap:6px}
+    .chip{background:var(--chip); border-radius:999px; padding:4px 12px; font-size:13px; color:var(--text)}
 
-    .item { display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; padding: 12px 0; border-bottom: 1px solid var(--border); }
-    .item:last-child { border-bottom: 0; }
-    .where { font-weight: 600; }
-    .meta { color: var(--muted); font-size: 14px; text-align: right; white-space: nowrap; }
-    .title { color: var(--text); }
-    ul.tiny { margin: 6px 0 0 18px; padding: 0; }
-    ul.tiny li { margin: 2px 0; }
+    .item{
+      display:grid; grid-template-columns:1fr auto; gap:4px 14px;
+      padding:12px 0; border-bottom:1px solid var(--border);
+    }
+    .item:last-child{border-bottom:0}
+    .where{font-weight:600; color:var(--accent)}
+    .meta{color:var(--muted); font-size:14px; text-align:right; white-space:nowrap}
+    .title{color:var(--text)}
+    ul.tiny{margin:6px 0 0 18px; padding:0}
+    ul.tiny li{margin:2px 0}
 
-    footer { display:none; }
+    i{color:var(--muted)} /* icons gray */
 
-    @media print {
-      nav.tools { display:none; }
-      a { color: inherit; text-decoration: none; }
-      .page { padding: 0; }
-      body { color: #000; }
+    /* ---------- Mobile & small tablets ---------- */
+    @media (max-width: 720px){
+      .page{padding:22px 14px 48px}
+      header{grid-template-columns:1fr; align-items:start; gap:10px}
+      .contact{text-align:left; line-height:1.4}
+      .contact div{margin:2px 0}
+      nav.tools .btn{width:100%; text-align:center}
+      h1{font-size:clamp(26px,7vw,34px)}
+      h2{font-size:16px; letter-spacing:.04em}
+      .summary{padding:10px}
+      .item{
+        grid-template-columns:1fr; gap:6px;
+      }
+      .meta{
+        text-align:left; white-space:normal; order:3; /* move date under content */
+        margin-top:2px;
+      }
+      ul.tiny{margin-left:16px}
+      .chips{gap:8px}
+      .chip{padding:6px 12px; font-size:14px}
+      .contact a{word-break:break-word}
+    }
+
+    /* ---------- Very small phones ---------- */
+    @media (max-width: 400px){
+      body{font-size:15px}
+      .btn{padding:9px 10px}
+      h2{font-size:15px}
+      .chip{font-size:13px}
+    }
+
+    @media print{
+      nav.tools{display:none}
+      a{color:inherit; text-decoration:none}
+      .page{padding:0}
+      body{color:#000}
     }
   </style>
 </head>
@@ -66,23 +108,23 @@
         <h1>Bita Malekian</h1>
         <div class="role">M.S. Computer Engineering — Texas A&M University</div>
         <nav class="tools">
-          <a class="btn" href="#" onclick="window.print()">Print / Save as PDF</a>
+          <a class="btn" href="#" onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Save as PDF</a>
         </nav>
       </div>
       <div class="contact">
-        <div>College Station, Texas</div>
-        <div><a href="tel:+19794469909">(979) 446-9909</a></div>
-        <div><a href="mailto:bita.malekian@tamu.edu">bita.malekian@tamu.edu</a></div>
+        <div><i class="fa-solid fa-location-dot"></i> College Station, Texas</div>
+        <div><i class="fa-solid fa-phone"></i> <a href="tel:+19794469909">(979) 446-9909</a></div>
+        <div><i class="fa-solid fa-envelope"></i> <a href="mailto:bita.malekian@tamu.edu">bita.malekian@tamu.edu</a></div>
       </div>
     </header>
 
     <section>
-      <h2>Summary</h2>
+      <h2><i class="fa-solid fa-user"></i> Summary</h2>
       <p class="summary">Graduate Teaching Assistant focusing on digital circuit design and FPGA systems (DE10-Lite). Former Database Administrator with hands-on experience in SQL Server administration, ETL, performance tuning, and ServiceNow ticketing. Strong in VHDL, T-SQL, and Python.</p>
     </section>
 
     <section>
-      <h2>Education</h2>
+      <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
       <div class="item">
         <div>
           <div class="where">Texas A&amp;M University — College Station, TX</div>
@@ -96,7 +138,7 @@
     </section>
 
     <section>
-      <h2>Experience</h2>
+      <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
       <div class="item">
         <div>
           <div class="where">Texas A&amp;M University — College Station, TX</div>
@@ -127,7 +169,7 @@
     </section>
 
     <section>
-      <h2>Skills</h2>
+      <h2><i class="fa-solid fa-code"></i> Skills</h2>
 
       <h3>Programming Languages</h3>
       <div class="chips">
@@ -165,7 +207,7 @@
     </section>
 
     <section>
-      <h2>Certifications</h2>
+      <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
       <div class="item">
         <div>
           <ul class="tiny">
