@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bita Malekian — Resume</title>
+  <meta name="description" content="One-page resume for Bita Malekian" />
+  <style>
+    :root {
+      --text: #0f172a;           /* slate-900 */
+      --muted: #475569;          /* slate-600 */
+      --bg: #ffffff;             /* white */
+      --accent: #2563eb;         /* blue-600 */
+      --chip: #e2e8f0;           /* slate-200 */
+      --border: #e5e7eb;         /* neutral-200 */
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text); background: var(--bg);
+    }
+    .page { max-width: 900px; margin: 0 auto; padding: 28px 18px 60px; }
+    header {
+      display: grid; gap: 6px; align-items: end; grid-template-columns: 1fr auto; border-bottom: 1px solid var(--border); padding-bottom: 14px; margin-bottom: 18px;
+    }
+    h1 { margin: 0; font-size: clamp(28px, 4.5vw, 40px); line-height: 1.15; }
+    .role { color: var(--muted); font-weight: 500; }
+    .contact { text-align: right; font-size: 14px; color: var(--muted); }
+    .contact a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+    .contact a:hover { color: var(--text); border-color: var(--text); }
+    nav.tools { margin-top: 10px; }
+    .btn { display: inline-block; font-size: 14px; padding: 6px 10px; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text); }
+    .btn:hover { border-color: var(--text); }
+
+    section { margin: 22px 0; }
+    h2 { margin: 0 0 8px; font-size: 18px; letter-spacing: 0.02em; text-transform: uppercase; }
+    h3 { margin: 8px 0 6px; font-size: 15px; font-weight: 600; color: var(--muted); }
+    .summary { color: var(--text); background: #f8fafc; border: 1px solid var(--border); padding: 12px; border-radius: 10px; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { background: var(--chip); border-radius: 999px; padding: 4px 10px; font-size: 13px; }
+
+    .item { display: grid; grid-template-columns: 1fr auto; gap: 4px 14px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .item:last-child { border-bottom: 0; }
+    .where { font-weight: 600; }
+    .meta { color: var(--muted); font-size: 14px; text-align: right; white-space: nowrap; }
+    .title { color: var(--text); }
+    ul.tiny { margin: 6px 0 0 18px; padding: 0; }
+    ul.tiny li { margin: 2px 0; }
+
+    footer { display:none; }
+
+    @media print {
+      nav.tools { display:none; }
+      a { color: inherit; text-decoration: none; }
+      .page { padding: 0; }
+      body { color: #000; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <h1>Bita Malekian</h1>
+        <div class="role">M.S. Computer Engineering — Texas A&M University</div>
+        <nav class="tools">
+          <a class="btn" href="#" onclick="window.print()">Print / Save as PDF</a>
+        </nav>
+      </div>
+      <div class="contact">
+        <div>College Station, Texas</div>
+        <div><a href="tel:+19794469909">(979) 446-9909</a></div>
+        <div><a href="mailto:bita.malekian@tamu.edu">bita.malekian@tamu.edu</a></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">Graduate Teaching Assistant focusing on digital circuit design and FPGA systems (DE10-Lite). Former Database Administrator with hands-on experience in SQL Server administration, ETL, performance tuning, and ServiceNow ticketing. Strong in VHDL, T-SQL, and Python.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="item">
+        <div>
+          <div class="where">Texas A&amp;M University — College Station, TX</div>
+          <div class="title">M.S. in Computer Engineering</div>
+          <ul class="tiny">
+            <li>Aug 2024 — <em>Expected</em> Dec 2025</li>
+          </ul>
+        </div>
+        <div class="meta">2024 — 2025</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="item">
+        <div>
+          <div class="where">Texas A&amp;M University — College Station, TX</div>
+          <div class="title">Teaching Assistant</div>
+          <ul class="tiny">
+            <li>Guide digital circuit design on the DE10-Lite FPGA board.</li>
+            <li>Instruct and debug VHDL architectures: clock/reset logic, state machines, timing-sensitive modules.</li>
+            <li>Configure, simulate, and debug designs with Intel® Quartus® Prime Lite and ModelSim.</li>
+            <li>Assist in troubleshooting signal integrity, clock synchronization, and logic timing issues.</li>
+          </ul>
+        </div>
+        <div class="meta">Aug 2024 — Present</div>
+      </div>
+
+      <div class="item">
+        <div>
+          <div class="where">Ican Engineering Group</div>
+          <div class="title">Database Administrator</div>
+          <ul class="tiny">
+            <li>Installed and configured databases; integrated data via ETL processes.</li>
+            <li>Managed incidents and service requests using ServiceNow (SNOW).</li>
+            <li>Monitored performance, optimized queries, and scheduled automated backups.</li>
+            <li>Managed user roles and permissions; created stored procedures, views, and triggers.</li>
+          </ul>
+        </div>
+        <div class="meta">Jun 2018 — Jul 2021</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+
+      <h3>Programming Languages</h3>
+      <div class="chips">
+        <span class="chip">VHDL</span>
+        <span class="chip">T-SQL</span>
+        <span class="chip">Python</span>
+        <span class="chip">PowerShell</span>
+        <span class="chip">C++</span>
+        <span class="chip">C#</span>
+      </div>
+
+      <div style="height:10px"></div>
+
+      <h3>Tools</h3>
+      <div class="chips">
+        <span class="chip">Intel® Quartus® Prime Lite</span>
+        <span class="chip">ModelSim</span>
+        <span class="chip">SSMS</span>
+        <span class="chip">Azure Data Studio</span>
+        <span class="chip">Tableau</span>
+        <span class="chip">ServiceNow (SNOW)</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">Git</span>
+      </div>
+
+      <div style="height:10px"></div>
+
+      <h3>Network Protocols</h3>
+      <div class="chips">
+        <span class="chip">TCP/IP</span>
+        <span class="chip">UDP</span>
+        <span class="chip">DHCP</span>
+        <span class="chip">DNS</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <div class="item">
+        <div>
+          <ul class="tiny">
+            <li>Microsoft Certified: Azure Data Fundamentals — Microsoft</li>
+            <li>Databases and SQL for Data Science with Python — Coursera</li>
+            <li>SQL Server Administration Bootcamp — Udemy</li>
+            <li>Microsoft Azure Fundamentals: Describe Cloud Concepts — Microsoft</li>
+            <li>Introduction to SQL Server — DataCamp</li>
+            <li>Introduction to SQL — DataCamp</li>
+            <li>Python Project for Data Science — Coursera</li>
+          </ul>
+        </div>
+        <div class="meta">—</div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
