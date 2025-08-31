@@ -3,118 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bita Malekian — Bio</title>
+  <title>Bita Malekianboroujeni — Bio</title>
   <style>
-    :root {
+    :root{
       --max: 760px;
-      --accent: #c94f7c; /* richer pink accent */
-      --light: #fdf8fa; 
-      --text: #333;
+      --accent: #444;        /* simple gray for minimalism */
+      --bg: #ffffff;         /* plain white background */
+      --card:#ffffff;
+      --ink:#222;
+      --muted:#666;
     }
-    body {
-      margin: 0;
-      font: 16px/1.6 "Segoe UI", system-ui, sans-serif;
-      background: var(--light);
-      color: var(--text);
+    html,body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font:16px/1.65 "Segoe UI",system-ui,-apple-system,Arial,sans-serif;
     }
-    main {
-      max-width: var(--max);
-      margin: 5vh auto;
-      padding: 0 20px;
+    main{
+      max-width:var(--max);
+      margin:5vh auto;
+      padding:0 20px;
     }
-    header, section {
-      background: #fff;
-      border: 2px solid var(--accent);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+    .card{
+      border:1px solid #ddd;
+      border-radius:8px;
+      padding:1.25rem;
+      margin:0 0 1.25rem;
     }
-    h1 {
-      margin: 0 0 .25rem;
-      font-size: 2rem;
-      color: var(--accent);
+    h1{
+      margin:.1rem 0 .4rem;
+      font-size:2rem;
+      color:var(--accent);
     }
-    .sub {
-      color: #666;
-      margin: 0 0 .5rem;
-      font-style: italic;
+    .email{
+      margin:0 0 .8rem;
+      font-size:.95rem;
     }
-    .short-desc {
-      margin: 0.5rem 0 1rem;
-      color: #444;
+    .email a{
+      color:var(--accent);
+      text-decoration:none;
+      border-bottom:1px solid #aaa;
     }
-    .email {
-      margin: 0 0 1rem;
-      font-size: .95rem;
+    .email a:hover{
+      border-bottom-color:var(--accent);
     }
-    figure {
-      margin: 1.5rem auto 0;
-      text-align: center;
+    .sub{
+      margin:0 0 1rem;
+      color:var(--muted);
+      font-style:italic;
     }
-    img {
-      max-width: 320px;
-      width: 100%;
-      border-radius: 10px;
-      border: 2px solid var(--accent);
+    figure{
+      margin:1rem auto 0;
+      text-align:center;
     }
-    figcaption {
-      font-size: .9rem;
-      color: #555;
-      margin-top: .5rem;
+    .portrait{
+      display:block;
+      margin:0 auto;
+      max-width:220px;
+      width:100%;
+      border-radius:6px;
+      border:1px solid #ccc;
     }
-    h2 {
-      font-size: 1.25rem;
-      color: var(--accent);
-      margin-top: 0;
+    figcaption{
+      font-size:.85rem;
+      color:var(--muted);
+      margin-top:.4rem;
     }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    .section{
+      border:1px solid #ddd;
+      border-radius:8px;
+      background:#fff;
+      padding:1rem 1.1rem;
+      margin:.9rem 0;
     }
   </style>
 </head>
 <body>
 <main>
-  <!-- Name & Classification -->
-  <header>
-    <h1>Bita Malekian</h1>
+  <!-- Top / Identity -->
+  <section class="card">
+    <h1>Bita Malekianboroujeni</h1>
     <p class="email">📧 <a href="mailto:bita.malekian@tamu.edu">bita.malekian@tamu.edu</a></p>
-    <p class="sub">M.S. in Computer Engineering · Texas A&amp;M University</p>
-    <p class="short-desc">Graduate student and teaching assistant focusing on digital design, data systems, and practical engineering solutions.</p>
+    <p class="sub">M.S. in Computer Engineering (Non-Thesis) · Texas A&amp;M University</p>
+
     <figure>
-      <img src="bio.jpg" alt="Bita Malekian standing by plush toys and a large bunny figure." />
-    
+      <img class="portrait" src="bio.jpg" alt="Bita Malekianboroujeni portrait" />
+      <figcaption>This is me, Bita.</figcaption>
     </figure>
-  </header>
-
-  <!-- Question 1 -->
-  <section>
-    <h2>Why I'm Taking This Class</h2>
-    <p>
-      I’m taking this class to build stronger problem-solving and communication skills, while also gaining experience in areas that are in high demand in today’s job market. The focus on human-centered design, user experience, and new topics like AI and persuasive technologies will help me stay current and make my skills more competitive for future opportunities.
-    </p>
   </section>
 
-  <!-- Question 2 -->
-  <section>
-    <h2>How This Class's Concepts Will Impact My Career</h2>
+  <!-- Integrated Story -->
+  <section class="section">
     <p>
-      The concepts from this Human-Computer Interaction course will impact my career by giving me a strong foundation in human-centered design. I will learn how to design user interfaces that are effective, intuitive, and user-friendly, using both usability principles and evaluation methods. The course also covers AI, ethics, and the societal impact of technology, knowledge that is increasingly important for creating responsible and successful systems.
+      My name is Bita Malekianboroujeni, and I am a Master’s student in Computer Engineering at Texas A&amp;M University. I also work as a teaching assistant for digital design, where I help students test circuits on FPGA boards, fix timing issues, and see how ideas on paper can become real. Teaching has shown me how important it is to explain things clearly and to organize problems in a way that makes sense to others.
     </p>
-  </section>
-
-  <!-- Question 3 -->
-  <section>
-    <h2>Relevant Courses and Their Relation to HCI</h2>
     <p>
-      I have taken courses like Data Visualization and Artificial Intelligence that connect closely to this HCI class. Data Visualization taught me how to design clear and effective visualizations, which is an important part of building user-friendly interfaces. My AI background gave me technical insight into intelligent systems, and HCI will help me focus on making those systems usable, ethical, and accessible for people.
+      I want to grow in the same way for my own career. I do not only want to solve technical problems, but also design systems that are clear, simple, and easy for people to use. That is why I chose to take Human-Computer Interaction. The class connects my technical background with skills that make technology more human-centered. By learning how to design and study user experiences, from usability rules to persuasive technologies, I can prepare myself for the job market and also become the kind of engineer who builds tools that people enjoy and trust.
+    </p>
+    <p>
+      The courses I have already taken give me a good start. In Data Visualization, I learned how to turn data into clear visual stories that help people see meaning without feeling lost. In Artificial Intelligence, I learned how modern systems make decisions, which can be powerful but hard to understand. Human-Computer Interaction adds the missing piece: how to design these systems so they are usable, ethical, and easy for people to work with. These courses together give me both the technical base and the human focus I need to design useful and responsible technology. This course is more than just part of my degree. It is helping me grow into an engineer who can design technology that is useful, easy to understand, and meaningful for the people who use it.
     </p>
   </section>
 </main>
 </body>
 </html>
-
