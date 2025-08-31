@@ -3,227 +3,117 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bita Malekian — Resume</title>
-  <meta name="description" content="One-page resume for Bita Malekian" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <title>Bita Malekian — Bio</title>
   <style>
-    :root{
-      --text:#374151;      /* dark gray */
-      --muted:#6b7280;     /* medium gray */
-      --bg:#ffffff;        /* white */
-      --accent:#374151;    /* dark gray for emphasis */
-      --heading:#374151;   /* heading gray */
-      --chip:#f3f4f6;      /* light gray */
-      --border:#e5e7eb;    /* light border */
+    :root {
+      --max: 760px;
+      --accent: #c94f7c; /* richer pink accent */
+      --light: #fdf8fa; 
+      --text: #333;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font:16px/1.6 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color:var(--text); background:var(--bg);
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    body {
+      margin: 0;
+      font: 16px/1.6 "Segoe UI", system-ui, sans-serif;
+      background: var(--light);
+      color: var(--text);
     }
-    .page{max-width:900px; margin:0 auto; padding:28px 18px 60px}
-
-    header{
-      display:grid; gap:6px; align-items:end;
-      grid-template-columns:1fr auto;
-      border-bottom:2px solid var(--border);
-      padding-bottom:14px; margin-bottom:18px;
+    main {
+      max-width: var(--max);
+      margin: 5vh auto;
+      padding: 0 20px;
     }
-    h1{margin:0; font-size:clamp(28px,4.5vw,40px); line-height:1.15; color:var(--accent)}
-    .role{color:var(--muted); font-weight:500; font-style:italic}
-    .contact{text-align:right; font-size:14px; color:var(--muted)}
-    .contact a{color:var(--muted); text-decoration:none; border-bottom:1px dotted var(--muted)}
-    .contact a:hover{color:var(--accent); border-color:var(--accent)}
-    nav.tools{margin-top:10px}
-    .btn{display:inline-block; font-size:14px; padding:10px 12px; border:1px solid var(--border); border-radius:20px; text-decoration:none; color:var(--accent); background:#fff}
-    .btn:hover{border-color:var(--accent); background:#f9fafb}
-
-    section{margin:22px 0}
-    h2{margin:0 0 8px; font-size:18px; letter-spacing:.02em; text-transform:uppercase; color:var(--heading)}
-    h3{margin:8px 0 6px; font-size:15px; font-weight:600; color:var(--muted)}
-    .summary{color:var(--text); background:#fafafa; border:1px solid var(--border); padding:12px; border-radius:12px}
-
-    .chips{display:flex; flex-wrap:wrap; gap:6px}
-    .chip{background:var(--chip); border-radius:999px; padding:4px 12px; font-size:13px; color:var(--text)}
-
-    .item{
-      display:grid; grid-template-columns:1fr auto; gap:4px 14px;
-      padding:12px 0; border-bottom:1px solid var(--border);
+    header, section {
+      background: #fff;
+      border: 2px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
     }
-    .item:last-child{border-bottom:0}
-    .where{font-weight:600; color:var(--accent)}
-    .meta{color:var(--muted); font-size:14px; text-align:right; white-space:nowrap}
-    .title{color:var(--text)}
-    ul.tiny{margin:6px 0 0 18px; padding:0}
-    ul.tiny li{margin:2px 0}
-
-    i{color:var(--muted)} /* icons gray */
-
-    /* ---------- Mobile & small tablets ---------- */
-    @media (max-width: 720px){
-      .page{padding:22px 14px 48px}
-      header{grid-template-columns:1fr; align-items:start; gap:10px}
-      .contact{text-align:left; line-height:1.4}
-      .contact div{margin:2px 0}
-      nav.tools .btn{width:100%; text-align:center}
-      h1{font-size:clamp(26px,7vw,34px)}
-      h2{font-size:16px; letter-spacing:.04em}
-      .summary{padding:10px}
-      .item{
-        grid-template-columns:1fr; gap:6px;
-      }
-      .meta{
-        text-align:left; white-space:normal; order:3; /* move date under content */
-        margin-top:2px;
-      }
-      ul.tiny{margin-left:16px}
-      .chips{gap:8px}
-      .chip{padding:6px 12px; font-size:14px}
-      .contact a{word-break:break-word}
+    h1 {
+      margin: 0 0 .25rem;
+      font-size: 2rem;
+      color: var(--accent);
     }
-
-    /* ---------- Very small phones ---------- */
-    @media (max-width: 400px){
-      body{font-size:15px}
-      .btn{padding:9px 10px}
-      h2{font-size:15px}
-      .chip{font-size:13px}
+    .sub {
+      color: #666;
+      margin: 0 0 .5rem;
+      font-style: italic;
     }
-
-    @media print{
-      nav.tools{display:none}
-      a{color:inherit; text-decoration:none}
-      .page{padding:0}
-      body{color:#000}
+    .short-desc {
+      margin: 0.5rem 0 1rem;
+      color: #444;
+    }
+    .email {
+      margin: 0 0 1rem;
+      font-size: .95rem;
+    }
+    figure {
+      margin: 1.5rem auto 0;
+      text-align: center;
+    }
+    img {
+      max-width: 320px;
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid var(--accent);
+    }
+    figcaption {
+      font-size: .9rem;
+      color: #555;
+      margin-top: .5rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      color: var(--accent);
+      margin-top: 0;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div>
-        <h1>Bita Malekian</h1>
-        <div class="role">M.S. Computer Engineering — Texas A&M University</div>
-        <nav class="tools">
-          <a class="btn" href="#" onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Save as PDF</a>
-        </nav>
-      </div>
-      <div class="contact">
-        <div><i class="fa-solid fa-location-dot"></i> College Station, Texas</div>
-        <div><i class="fa-solid fa-phone"></i> <a href="tel:+19794469909">(979) 446-9909</a></div>
-        <div><i class="fa-solid fa-envelope"></i> <a href="mailto:bita.malekian@tamu.edu">bita.malekian@tamu.edu</a></div>
-      </div>
-    </header>
+<main>
+  <!-- Name & Classification -->
+  <header>
+    <h1>Bita Malekian</h1>
+    <p class="email">📧 <a href="mailto:bita.malekian@tamu.edu">bita.malekian@tamu.edu</a></p>
+    <p class="sub">M.S. in Computer Engineering · Texas A&amp;M University</p>
+    <p class="short-desc">Graduate student and teaching assistant focusing on digital design, data systems, and practical engineering solutions.</p>
+    <figure>
+      <img src="bio.jpg" alt="Bita Malekian standing by plush toys and a large bunny figure." />
+      <figcaption>That’s me, <strong>Bita</strong>, enjoying a fun and colorful spot.</figcaption>
+    </figure>
+  </header>
 
-    <section>
-      <h2><i class="fa-solid fa-user"></i> Summary</h2>
-      <p class="summary">Graduate Teaching Assistant focusing on digital circuit design and FPGA systems (DE10-Lite). Former Database Administrator with hands-on experience in SQL Server administration, ETL, performance tuning, and ServiceNow ticketing. Strong in VHDL, T-SQL, and Python.</p>
-    </section>
+  <!-- Question 1 -->
+  <section>
+    <h2>Why I'm Taking This Class</h2>
+    <p>
+      I’m taking this class to build stronger problem-solving and communication skills, while also gaining experience in areas that are in high demand in today’s job market. The focus on human-centered design, user experience, and new topics like AI and persuasive technologies will help me stay current and make my skills more competitive for future opportunities.
+    </p>
+  </section>
 
-    <section>
-      <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-      <div class="item">
-        <div>
-          <div class="where">Texas A&amp;M University — College Station, TX</div>
-          <div class="title">M.S. in Computer Engineering</div>
-          <ul class="tiny">
-            <li>Aug 2024 — <em>Expected</em> Dec 2025</li>
-          </ul>
-        </div>
-        <div class="meta">2024 — 2025</div>
-      </div>
-    </section>
+  <!-- Question 2 -->
+  <section>
+    <h2>How This Class's Concepts Will Impact My Career</h2>
+    <p>
+      The concepts from this Human-Computer Interaction course will impact my career by giving me a strong foundation in human-centered design. I will learn how to design user interfaces that are effective, intuitive, and user-friendly, using both usability principles and evaluation methods. The course also covers AI, ethics, and the societal impact of technology, knowledge that is increasingly important for creating responsible and successful systems.
+    </p>
+  </section>
 
-    <section>
-      <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
-      <div class="item">
-        <div>
-          <div class="where">Texas A&amp;M University — College Station, TX</div>
-          <div class="title">Teaching Assistant</div>
-          <ul class="tiny">
-            <li>Guide digital circuit design on the DE10-Lite FPGA board.</li>
-            <li>Instruct and debug VHDL architectures: clock/reset logic, state machines, timing-sensitive modules.</li>
-            <li>Configure, simulate, and debug designs with Intel® Quartus® Prime Lite and ModelSim.</li>
-            <li>Assist in troubleshooting signal integrity, clock synchronization, and logic timing issues.</li>
-          </ul>
-        </div>
-        <div class="meta">Aug 2024 — Present</div>
-      </div>
-
-      <div class="item">
-        <div>
-          <div class="where">Ican Engineering Group</div>
-          <div class="title">Database Administrator</div>
-          <ul class="tiny">
-            <li>Installed and configured databases; integrated data via ETL processes.</li>
-            <li>Managed incidents and service requests using ServiceNow (SNOW).</li>
-            <li>Monitored performance, optimized queries, and scheduled automated backups.</li>
-            <li>Managed user roles and permissions; created stored procedures, views, and triggers.</li>
-          </ul>
-        </div>
-        <div class="meta">Jun 2018 — Jul 2021</div>
-      </div>
-    </section>
-
-    <section>
-      <h2><i class="fa-solid fa-code"></i> Skills</h2>
-
-      <h3>Programming Languages</h3>
-      <div class="chips">
-        <span class="chip">VHDL</span>
-        <span class="chip">T-SQL</span>
-        <span class="chip">Python</span>
-        <span class="chip">PowerShell</span>
-        <span class="chip">C++</span>
-        <span class="chip">C#</span>
-      </div>
-
-      <div style="height:10px"></div>
-
-      <h3>Tools</h3>
-      <div class="chips">
-        <span class="chip">Intel® Quartus® Prime Lite</span>
-        <span class="chip">ModelSim</span>
-        <span class="chip">SSMS</span>
-        <span class="chip">Azure Data Studio</span>
-        <span class="chip">Tableau</span>
-        <span class="chip">ServiceNow (SNOW)</span>
-        <span class="chip">VS Code</span>
-        <span class="chip">Git</span>
-      </div>
-
-      <div style="height:10px"></div>
-
-      <h3>Network Protocols</h3>
-      <div class="chips">
-        <span class="chip">TCP/IP</span>
-        <span class="chip">UDP</span>
-        <span class="chip">DHCP</span>
-        <span class="chip">DNS</span>
-      </div>
-    </section>
-
-    <section>
-      <h2><i class="fa-solid fa-certificate"></i> Certifications</h2>
-      <div class="item">
-        <div>
-          <ul class="tiny">
-            <li>Microsoft Certified: Azure Data Fundamentals — Microsoft</li>
-            <li>Databases and SQL for Data Science with Python — Coursera</li>
-            <li>SQL Server Administration Bootcamp — Udemy</li>
-            <li>Microsoft Azure Fundamentals: Describe Cloud Concepts — Microsoft</li>
-            <li>Introduction to SQL Server — DataCamp</li>
-            <li>Introduction to SQL — DataCamp</li>
-            <li>Python Project for Data Science — Coursera</li>
-          </ul>
-        </div>
-        <div class="meta">—</div>
-      </div>
-    </section>
-
-  </div>
+  <!-- Question 3 -->
+  <section>
+    <h2>Relevant Courses and Their Relation to HCI</h2>
+    <p>
+      I have taken courses like Data Visualization and Artificial Intelligence that connect closely to this HCI class. Data Visualization taught me how to design clear and effective visualizations, which is an important part of building user-friendly interfaces. My AI background gave me technical insight into intelligent systems, and HCI will help me focus on making those systems usable, ethical, and accessible for people.
+    </p>
+  </section>
+</main>
 </body>
 </html>
